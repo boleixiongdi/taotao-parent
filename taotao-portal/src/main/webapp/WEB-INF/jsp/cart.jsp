@@ -11,8 +11,8 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
    <meta name="format-detection" content="telephone=no">
    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-   <link rel="stylesheet" href="/css/base.css">
-   <link href="/css/purchase.2012.css?v=201410141639" rel="stylesheet" type="text/css">
+   <link rel="stylesheet" href="http://localhost:8082/taotao-portal/css/base.css">
+   <link href="http://localhost:8082/taotao-portal/css/purchase.2012.css?v=201410141639" rel="stylesheet" type="text/css">
    <title>我的购物车 - 淘淘商城</title>
    <script>
    	var pageConfig  = {};
@@ -22,7 +22,7 @@
 <jsp:include page="commons/shortcut.jsp" />
 <!--shortcut end-->
 <div class="w w1 header clearfix">
-	<div id="logo"><a href="/"><img clstag="clickcart|keycount|xincart|logo" src="/images/taotao-logo.gif" title="返回淘淘商城首页" alt="返回淘淘商城首页"></a></div>
+	<div id="logo"><a href="http://localhost:8082/taotao-portal"><img clstag="clickcart|keycount|xincart|logo" src="http://localhost:8082/taotao-portal/images/taotao-logo.gif" title="返回淘淘商城首页" alt="返回淘淘商城首页"></a></div>
     <div class="language"><a href="javascript:void(0);" onclick="toEnCart()"></a></div>
 	<div class="progress clearfix">
 		<ul class="progress-1">

@@ -7,16 +7,16 @@
     <meta http-equiv="pragma" content="no-cache">
     <meta http-equiv="Cache-Control" content="no-cache,must-revalidate">
     <title>注册-个人用户</title>
-    <link type="text/css" rel="stylesheet" href="/css/regist.personal.css"/>
-    <link type="text/css" rel="stylesheet" href="/css/passport.base.css"/>
-    <script type="text/javascript" src="/js/jquery-1.6.4.js"></script>
+    <link type="text/css" rel="stylesheet" href="http://localhost:8090/taotao-sso/css/regist.personal.css"/>
+    <link type="text/css" rel="stylesheet" href="http://localhost:8090/taotao-sso/css/passport.base.css"/>
+    <script type="text/javascript" src="http://localhost:8090/taotao-sso/js/jquery-1.6.4.js"></script>
 </head>
 <body>
 <div class="w" id="logo">
     <div>
-<!--     	<a href="http://localhost:8082"> -->
-    	<a href="http://www.taotao.com">
-    		<img src="/images/taotao-logo.gif" alt="淘淘商城" width="170" height="60"/>
+    	<a href="http://localhost:8082/taotao-portal/">
+    	<!-- <a href="http://www.taotao.com"> -->
+    		<img src="http://localhost:8090/taotao-sso/images/taotao-logo.gif" alt="淘淘商城" width="170" height="60"/>
     	</a> <b></b>
     </div>
 </div>
@@ -28,7 +28,7 @@
         </ul>
         <div class="extra">
         <span>我已经注册，现在就&nbsp;
-        	<a href="/user/showLogin" class="flk13">登录</a>
+        	<a href="showLogin" class="flk13">登录</a>
         </span>
         </div>
     </div>
@@ -109,7 +109,7 @@
                 </div>
             </div>
             <div class="phone">
-                <img width="180" height="180" src="/images/phone-bg.jpg">
+                <img width="180" height="180" src="http://localhost:8090/taotao-sso/images/phone-bg.jpg">
             </div>
             <span class="clr"></span>
         </form>
