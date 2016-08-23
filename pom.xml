@@ -35,6 +35,7 @@
 	<modules>
 	  	<module>taotao-common</module>
 	  	<module>taotao-manager</module>
+	  	<module>taotao-merchant</module>
 	  	<module>taotao-order</module>
 	  	<module>taotao-portal</module>
 	  	<module>taotao-rest</module>
