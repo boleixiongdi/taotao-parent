@@ -1,35 +1,34 @@
 package com.taotao.rest.solrj;
 
-import java.io.IOException;
-
 import org.apache.solr.client.solrj.SolrQuery;
 import org.apache.solr.client.solrj.SolrServer;
-import org.apache.solr.client.solrj.SolrServerException;
 import org.apache.solr.client.solrj.impl.HttpSolrServer;
 import org.apache.solr.client.solrj.response.QueryResponse;
+import org.apache.solr.client.solrj.response.UpdateResponse;
 import org.apache.solr.common.SolrDocument;
 import org.apache.solr.common.SolrDocumentList;
 import org.apache.solr.common.SolrInputDocument;
 import org.junit.Test;
 
-public class SolrJTest {
+public class SolrJTest{
 
-	@Test
+	
 	public void addDocument() throws Exception {
 		//创建一连接
-		SolrServer solrServer = new HttpSolrServer("http://192.168.10.111:8080/solr");
+		SolrServer solrServer = new HttpSolrServer("http://192.168.1.56:8080/solr/collection1/");
 		//创建一个文档对象
 		SolrInputDocument document = new SolrInputDocument();
 		document.addField("id", "test001");
-		document.addField("item_title", "测试商品2");
-		document.addField("item_price", 54321);
+		document.addField("title", "测试");
+		document.addField("description", "这是一个测试");
 		//把文档对象写入索引库
 		solrServer.add(document);
 		//提交
-		solrServer.commit();
+		UpdateResponse updateResponse = solrServer.commit();
+		System.out.println(updateResponse);
 	}
 	
-	@Test
+	
 	public void deleteDocument() throws Exception {
 		//创建一连接
 		SolrServer solrServer = new HttpSolrServer("http://192.168.10.111:8080/solr");
@@ -40,12 +39,12 @@ public class SolrJTest {
 	
 	@Test
 	public void queryDocument() throws Exception {
-		SolrServer solrServer = new HttpSolrServer("http://192.168.10.111:8080/solr");
+		SolrServer solrServer = new HttpSolrServer("http://192.168.1.56:8080/solr/collection1/");
 		//创建一个查询对象
 		SolrQuery query = new SolrQuery();
 		//设置查询条件
 		query.setQuery("*:*");
-		query.setStart(20);
+		query.setStart(0);
 		query.setRows(50);
 		//执行查询
 		QueryResponse response = solrServer.query(query);
@@ -53,10 +52,10 @@ public class SolrJTest {
 		SolrDocumentList solrDocumentList = response.getResults();
 		System.out.println("共查询到记录：" + solrDocumentList.getNumFound());
 		for (SolrDocument solrDocument : solrDocumentList) {
+			System.out.println(solrDocument);
 			System.out.println(solrDocument.get("id"));
-			System.out.println(solrDocument.get("item_title"));
-			System.out.println(solrDocument.get("item_price"));
-			System.out.println(solrDocument.get("item_image"));
+			System.out.println(solrDocument.get("title"));
+			System.out.println(solrDocument.get("description"));
 			
 		}
 	}
